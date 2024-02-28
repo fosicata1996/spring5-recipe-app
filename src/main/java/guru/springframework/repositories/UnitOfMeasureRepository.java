@@ -9,4 +9,8 @@ public interface UnitOfMeasureRepository extends CrudRepository<UnitOfMeasure, L
 
     Optional<UnitOfMeasure> findByDescription(String description);
 
+    default UnitOfMeasure findByDescriptionOrThrow(String description) {
+        return this.findByDescription(description).orElseThrow(() -> new RuntimeException("Expected UOM Not Found"));
+    }
+
 }
