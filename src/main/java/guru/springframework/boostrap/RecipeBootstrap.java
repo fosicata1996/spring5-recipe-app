@@ -89,6 +89,10 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
         tacosRecipe.add(new Ingredient("cup sour cream thinned with 1/4 cup milk", new BigDecimal(4), cupsUom));
         tacosRecipe.add(new Ingredient("lime, cut into wedges", new BigDecimal(4), eachUom));
 
+        tacosRecipe.setUrl("https://facebook.com");
+        tacosRecipe.setServings(2);
+        tacosRecipe.setSource("Simply Recipe");
+
         tacosRecipe.getCategories().add(americanCategory);
         tacosRecipe.getCategories().add(mexicanCategory);
         return tacosRecipe;
@@ -136,6 +140,10 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
         guacRecipe.add(new Ingredient("Cilantro", new BigDecimal(2), tableSpoonUom));
         guacRecipe.add(new Ingredient("freshly grated black pepper", new BigDecimal(2), dashUom));
         guacRecipe.add(new Ingredient("ripe tomato, seeds and pulp removed, chopped", new BigDecimal(".5"), eachUom));
+
+        guacRecipe.setUrl("https://youtube.com");
+        guacRecipe.setServings(4);
+        guacRecipe.setSource("Simply Recipe");
 
         guacRecipe.getCategories().add(americanCategory);
         guacRecipe.getCategories().add(mexicanCategory);
