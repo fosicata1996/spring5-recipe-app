@@ -24,7 +24,7 @@ public class IngredientToEntity implements Converter<IngredientCommand, Ingredie
         ingredient.setId(source.getId());
         ingredient.setAmount(source.getAmount());
         ingredient.setDescription(source.getDescription());
-        ingredient.setUom(uomToEntity.convert(source.getUnitOfMeasure()));
+        ingredient.setUom(uomToEntity.convert(source.getUom()));
         return ingredient;
     }
 }
