@@ -2,6 +2,7 @@ package guru.springframework.converters;
 
 import guru.springframework.commands.IngredientCommand;
 import guru.springframework.domain.Ingredient;
+import guru.springframework.domain.Recipe;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.lang.Nullable;
@@ -22,6 +23,11 @@ public class IngredientToEntity implements Converter<IngredientCommand, Ingredie
 
         final Ingredient ingredient = new Ingredient();
         ingredient.setId(source.getId());
+        if (source.getRecipeId() != null) {
+            Recipe recipe = new Recipe();
+            recipe.setId(source.getRecipeId());
+            recipe.add(ingredient);
+        }
         ingredient.setAmount(source.getAmount());
         ingredient.setDescription(source.getDescription());
         ingredient.setUom(uomToEntity.convert(source.getUom()));
