@@ -13,7 +13,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 public class UnitOfMeasureServiceImplTest {
 
@@ -49,7 +50,7 @@ public class UnitOfMeasureServiceImplTest {
 
         //then
         assertEquals(2, commands.size());
-        verify(unitOfMeasureRepository, times(1)).findAll();
+        verify(unitOfMeasureRepository).findAll();
     }
 
 }

@@ -31,7 +31,7 @@
                                 </div>
                                 <div class="col-md-1">
                                     <a class="btn btn-default" href="#"
-                                       th:href="@{'/recipe/' + ${recipe.id} + '/ingredient/new'}" role="button">New</a>
+                                       th:href="@{'/recipe/' + ${recipe.id} + '/ingredients/new'}" role="button">New</a>
                                 </div>
                             </div>
                         </div>
@@ -54,13 +54,13 @@
                                             Tasty Goodnees 3
                                         </td>
                                         <td><a href="#"
-                                               th:href="@{'/recipe/' + ${recipe.id} + '/ingredient/' + ${ingredient.id}}">View</a>
+                                               th:href="@{'/recipe/' + ${recipe.id} + '/ingredients/' + ${ingredient.id}}">View</a>
                                         </td>
                                         <td><a href="#"
-                                               th:href="@{'/recipe/' + ${recipe.id} + '/ingredient/' + ${ingredient.id} + '/update'}">Update</a>
+                                               th:href="@{'/recipe/' + ${recipe.id} + '/ingredients/' + ${ingredient.id} + '/update'}">Update</a>
                                         </td>
                                         <td><a href="#"
-                                               th:href="@{'/recipe/' + ${recipe.id} + '/ingredient/' + ${ingredient.id} + '/delete'}">Delete</a>
+                                               th:href="@{'/recipe/' + ${recipe.id} + '/ingredients/' + ${ingredient.id} + '/delete'}">Delete</a>
                                         </td>
                                     </tr>
                                 </table>
